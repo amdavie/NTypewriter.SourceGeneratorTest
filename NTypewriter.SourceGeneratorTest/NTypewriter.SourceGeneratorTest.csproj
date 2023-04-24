@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NTypewriter.SourceGenerator" Version="0.1.70" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <Compile Update="HelloWorld.g.cs">
+      <CustomToolNamespace>81567829-889b-4c96-b6bf-5d05ed4ac49b</CustomToolNamespace>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="HelloWorld.nt">
+      <CustomToolNamespace>81567829-889b-4c96-b6bf-5d05ed4ac49b</CustomToolNamespace>
+    </None>
+  </ItemGroup>-->
+
+	<ItemGroup>
+		<None Remove="HelloWorld.nt" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<AdditionalFiles Include="HelloWorld.nt">
+			<CustomToolNamespace></CustomToolNamespace>
+		</AdditionalFiles>
+	</ItemGroup>
+
+</Project>

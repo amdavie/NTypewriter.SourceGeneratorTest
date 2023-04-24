@@ -1,0 +1,10 @@
+﻿﻿{{- capture output -}}
+namespace NTypewriter.SourceGeneratorTest
+{
+    internal static partial class HelloWorld
+    {
+        public static partial string SayHello() => "Hello, World!";
+    }
+}
+{{ end  }}
+{{ Save output "HelloWorld.g.cs" }}
